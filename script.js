@@ -1,7 +1,7 @@
 const yourShip = document.querySelector('.player-shooter');
 const playArea = document.querySelectorAll('#main-play-area');
 
-function flyShip() {
+function flyShip(event) {
     if(event.key === 'ArrowUp') {
         event.preventDefault();
         moveUp();
@@ -14,7 +14,7 @@ function flyShip() {
     }
 }
 
-function moveUp() {
+function moveUp(event) {
     let topPosition = getComputedStyle(yourShip).getPropertyValue('top');
     if(topPosition === "0 px") {
         return
